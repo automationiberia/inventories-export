@@ -1,0 +1,16 @@
+---
+controller_groups:
+  - name: AWS
+    inventory: "Demo Inventory AWS"
+    hosts:
+      - aws-instance-group
+    variables:
+      k8s_flavor: AWS
+
+  - name: AZU
+    inventory: "Demo Inventory AZU"
+    hosts:
+      - azu-instance-group
+    variables:
+      k8s_flavor: AZU
+...

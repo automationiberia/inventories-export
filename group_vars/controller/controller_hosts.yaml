@@ -1,0 +1,14 @@
+---
+controller_hosts:
+  - name: aws-instance-group
+    description: localhost
+    inventory: "Demo Inventory AWS"
+
+  - name: azu-instance-group
+    description: localhost
+    inventory: "Demo Inventory AZU"
+
+  - name: vm-onprem-instance-group
+    description: localhost
+    inventory: "Demo Inventory VM_ON_PREM"
+...

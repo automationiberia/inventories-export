@@ -1,0 +1,40 @@
+{
+ "collection_info": {
+  "namespace": "redhat_cop",
+  "name": "controller_configuration",
+  "version": "2.3.1",
+  "authors": [
+   "Andrew Huffman",
+   "Jonathan Lozada De La Matta @jlozadad",
+   "Kedar Kulkarni @kedark3",
+   "Tom Page @Tompage1994",
+   "Sean Sullivan @sean-m-sullivan",
+   "David Danielsson @djdanielsson"
+  ],
+  "readme": "README.md",
+  "tags": [
+   "controller",
+   "collection",
+   "controller_configuration",
+   "automation_platform"
+  ],
+  "description": "A collection of roles to manage Ansible Controller",
+  "license": [
+   "GPL-3.0-or-later"
+  ],
+  "license_file": null,
+  "dependencies": {},
+  "repository": "https://github.com/redhat-cop/controller_configuration/",
+  "documentation": null,
+  "homepage": null,
+  "issues": "https://github.com/redhat-cop/controller_configuration//issues"
+ },
+ "file_manifest_file": {
+  "name": "FILES.json",
+  "ftype": "file",
+  "chksum_type": "sha256",
+  "chksum_sha256": "8487063c83dda315e4a407ada22ce4f924e033593a9a4e3c3056c10f37942017",
+  "format": 1
+ },
+ "format": 1
+}

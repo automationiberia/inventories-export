@@ -1,0 +1,14 @@
+---
+controller_inventories:
+  - name: "Demo Inventory AWS"
+    description: "Demo Inventory AWS"
+    organization: "Default"
+
+  - name: "Demo Inventory AZU"
+    description: "Demo Inventory AZU"
+    organization: "Default"
+
+  - name: "Demo Inventory VM_ON_PREM"
+    description: "Demo Inventory VM_ON_PREM"
+    organization: "Default"
+...

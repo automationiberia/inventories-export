@@ -1,0 +1,60 @@
+---
+- hosts: controller
+  connection: local
+  gather_facts: false
+  vars:
+    controller_state: present
+    controller_hostname: "{{ vault_controller_hostname }}"
+    controller_username: "{{ vault_controller_username }}"
+    controller_password: "{{ vault_controller_password }}"
+    controller_validate_certs: "{{ vault_controller_validate_certs }}"
+  tasks:
+   - name: Include inventories role
+     ansible.builtin.include_role:
+       name: infra.controller_configuration.inventories
+       apply:
+         tags:
+           - inventories
+     when:
+     - controller_inventories is defined
+     - controller_inventories | length is not match('0')
+     tags:
+       - inventories
+
+   - name: Include inventory_sources role
+     ansible.builtin.include_role:
+       name: infra.controller_configuration.inventory_sources
+       apply:
+         tags:
+           - inventory_sources
+     when:
+     - controller_inventory_sources is defined
+     - controller_inventory_sources | length is not match('0')
+     tags:
+       - inventory_sources
+
+   - name: Include hosts role
+     ansible.builtin.include_role:
+       name: infra.controller_configuration.hosts
+       apply:
+         tags:
+           - hosts
+     when:
+     - controller_hosts is defined
+     - controller_hosts | length is not match('0')
+     tags:
+       - hosts
+
+   - name: Include groups role
+     ansible.builtin.include_role:
+       name: infra.controller_configuration.groups
+       apply:
+         tags:
+           - groups
+     when:
+     - controller_groups is defined
+     - controller_groups | length is not match('0')
+     tags:
+       - groups
+
+...
