@@ -3,7 +3,6 @@
   connection: local
   gather_facts: false
   vars:
-    controller_state: present
     controller_hostname: "{{ vault_controller_hostname }}"
     controller_username: "{{ vault_controller_username }}"
     controller_password: "{{ vault_controller_password }}"
