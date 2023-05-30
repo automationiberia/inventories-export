@@ -1,11 +1,11 @@
 # # inventories-export
 
-```yaml
-ansible-playbook -i inventory inventory-export.yaml  -e '{input_tag: [inventory,users,teams]}'
+```console
+$ ansible-playbook -i inventory inventory-export.yaml  -e '{input_tag: [inventory,users,teams]}'
 ```
 
-```yaml
- tree group_vars/controller/
+```console
+$ tree group_vars/controller/
 group_vars/controller/
 ├── controller_groups.yaml
 ├── controller_hosts.yaml
@@ -29,10 +29,10 @@ controller_hosts:
     inventory: "Demo Inventory VM_ON_PREM"
 ```
 
-```yaml
+```console
 ansible-playbook -i inventory config-controller.yaml --tags hosts -e '{controller_state: absent}'
 ```
 
-```yaml
+```console
 ansible-playbook -i inventory config-controller.yaml --tags hosts -e '{controller_state: absent}' -e@'/tmp/filetree_output/Default/inventories/Demo_Inventory/current_hosts.yaml'
 ```
