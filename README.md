@@ -1,7 +1,7 @@
 # # inventories-export
 
 ```yaml
- ansible-playbook -i inventory inventory-export.yaml  -e '{input_tag: [inventory,,users,teams]}'
+ansible-playbook -i inventory inventory-export.yaml  -e '{input_tag: [inventory,users,teams]}'
 ```
 
 ```yaml
